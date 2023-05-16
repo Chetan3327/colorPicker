@@ -1,0 +1,28 @@
+body {
+    /* background-color: #b156fe; */
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+span{
+    margin-left: 10px;
+}
+input{
+    margin: 10px;
+}
+p{
+    text-align: center;
+    cursor: pointer;
+}
+p:hover{
+    background-color: rgb(224,229,202);
+}
