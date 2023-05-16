@@ -8,6 +8,7 @@ const b_value = document.getElementById("b_value")
 
 // const page = document.getElementById("body")
 const result = document.getElementById("result")
+const resultHex = document.getElementById("resultHex")
 
 function update(){
     let r = parseInt(red.value)
@@ -21,7 +22,20 @@ function update(){
     document.body.style.backgroundColor = `rgb(${r},${g},${b})`
     // result.value = `rgb(${r},${g},${b})`
     result.innerText = `rgb(${r},${g},${b})`
+    resultHex.innerText = rgb22hex(r,g,b)
 }
+
+const rgb22hex = (...args) => {
+    let r = '#'
+    for(let arg of args){
+        r += arg.toString(16).padStart(2,'0')
+    }
+    return r 
+}
+
+
+
+
 
 // result.onmouseover = () => {
 //     result.style.backgroundColor = document.body.style.backgroundColor
