@@ -22,8 +22,12 @@ function update(){
     document.body.style.backgroundColor = `rgb(${r},${g},${b})`
     // result.value = `rgb(${r},${g},${b})`
     result.innerText = `rgb(${r},${g},${b})`
+    // resultHex.innerText = rgb2hex(`rgb(${r},${g},${b})`)
     resultHex.innerText = rgb22hex(r,g,b)
+    
 }
+
+// const rgb2hex = (rgb) => `#${rgb.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/).slice(1).map(n => parseInt(n, 10).toString(16).padStart(2, '0')).join('')}`
 
 const rgb22hex = (...args) => {
     let r = '#'
@@ -34,9 +38,6 @@ const rgb22hex = (...args) => {
 }
 
 
-
-
-
 // result.onmouseover = () => {
 //     result.style.backgroundColor = document.body.style.backgroundColor
 // }
@@ -44,3 +45,17 @@ const rgb22hex = (...args) => {
 //     result.style.backgroundColor = "#fffff"
 // }
 
+
+
+function copy(obj){
+    // result.select()
+    // navigator.clipboard.writeText(result.value)
+
+    try {
+        navigator.clipboard.writeText(obj.innerText);
+        console.log(obj);
+        console.log('Content copied to clipboard');
+    }catch (err) {
+        console.error('Failed to copy: ', err);
+    }
+}
