@@ -2,27 +2,23 @@
 <html lang="en">
 
 <head>
-    <title>Country Cards</title>
+    <title>color Picker</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#ffff00">
+    <meta name="theme-color" content="#000000">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body id="page">
-    <div class="test">
-        <p>for testing purpose</p>
-        <p id="test"></p>
-    </div>
     <div class="container">
         <input type="range" name="" id="red" min="0" max="255" value="0" oninput="update()"><span id="r_value">0</span><br>
         <input type="range" name="" id="green" min="0" max="255" value="0" oninput="update()"><span id="g_value">0</span><br>
         <input type="range" name="" id="blue" min="0" max="255" value="0" oninput="update()"><span id="b_value">0</span><br>
         <!-- <input type="text" id="result" onclick="copy()" placeholder="rgb(255,255,255)"></p> -->
         <hr>
-        <p id="result" onclick="copy(this)">rgb(255,255,255)</p>
-        <p id="resultHex" onclick="copy(this)">#ffffff</p>
+        <p id="result" onclick="copy(this)">rgb(0,0,0)</p>
+        <p id="resultHex" onclick="copy(this)">#000000</p>
     </div>
     <script src="colorPicker.js"></script>
 </body>
