@@ -22,6 +22,8 @@ function update(){
     document.body.style.backgroundColor = `rgb(${r},${g},${b})`
     // result.value = `rgb(${r},${g},${b})`
     result.innerText = `rgb(${r},${g},${b})`
+    document.getElementsByTagName('meta')['theme-color'].content = rgb22hex(r,g,b)
+    console.log(document.getElementsByTagName('meta')['theme-color'].content)
     // resultHex.innerText = rgb2hex(`rgb(${r},${g},${b})`)
     resultHex.innerText = rgb22hex(r,g,b)
     
