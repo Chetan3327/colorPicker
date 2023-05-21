@@ -23,6 +23,8 @@ function update(){
     // result.value = `rgb(${r},${g},${b})`
     result.innerText = `rgb(${r},${g},${b})`
     document.getElementsByTagName('meta')['theme-color'].content = rgb22hex(r,g,b)
+    const test = document.getElementById("test")
+    test.innerText = document.getElementsByTagName('meta')['theme-color'].content
     console.log(document.getElementsByTagName('meta')['theme-color'].content)
     // resultHex.innerText = rgb2hex(`rgb(${r},${g},${b})`)
     resultHex.innerText = rgb22hex(r,g,b)
